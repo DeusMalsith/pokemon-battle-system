@@ -1,0 +1,18 @@
+body {
+	background: no-repeat center fixed;
+	background-color: #8bac0f;
+	background-image: url('../assets/img/gb.png');
+
+}
+
+#attack1 {
+	position: absolute;
+	left: 40%;
+	top: 70%;
+}
+
+#attack2 {
+	position: absolute;
+	left: 52%;
+	top: 70%;
+}
