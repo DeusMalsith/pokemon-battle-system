@@ -5,14 +5,17 @@ body {
 
 }
 
+#game-window {
+	position: relative;
+	margin-top: 630px;
+	margin-left: 40%;
+}
+
 #attack1 {
 	position: absolute;
-	left: 40%;
-	top: 70%;
 }
 
 #attack2 {
 	position: absolute;
-	left: 52%;
-	top: 70%;
+	margin-left: 200px;
 }

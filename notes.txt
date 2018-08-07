@@ -4,7 +4,6 @@ Main Features
 -Stats of two characters
 -Item (potion) feature
 -2 or 3 attacks (mirrored for enemy)
--Capture function
 -Turn based
 -Basic enemy AI (random number generator for attack selection)
 
@@ -15,22 +14,13 @@ Extra Features
 -Battle text
 -Sound effects
 -Battle intro sequence
+-Pokemon types
 -Complete battle with a trainer (FINAL END GOAL)
 
 
 Today's Goal
 -------------------------------
-Get basic js functionality
-Attack function working
-
-
-Declare pokemon obect
-	fields
-		hp
-		moveset
-		img
-	methods
-		decrementHealth
-		attack
-create moveset object
-create two pokemon
+Set death function
+Have enemy attack
+item function
+print health of pokemon on screen
