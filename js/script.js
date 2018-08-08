@@ -7,13 +7,17 @@ let enemyPokemon;
 //Pokemon max of six
 function initGame() {
 	for (var i = 0; i < 6; i++) {
-		player.push(pokemon.splice(Math.floor(Math.random() * pokemon.length), 1)[0]);
-		enemy.push(pokemon.splice(Math.floor(Math.random() * pokemon.length), 1)[0]);
+		var tempPokemon = pokemon.splice(Math.floor(Math.random() * pokemon.length), 1)[0];
+		tempPokemon.owner = 'player';
+		playerParty.push(tempPokemon);
+		tempPokemon = pokemon.splice(Math.floor(Math.random() * pokemon.length), 1)[0];
+		tempPokemon.owner = 'enemy';
+		enemyParty.push(tempPokemon);
 	}
 
-	playerPokemon = player[0];
+	playerPokemon = playerParty[0];
 	console.log(playerPokemon);
-	enemyPokemon = enemy[0];
+	enemyPokemon = enemyParty[0];
 	console.log(enemyPokemon);
 }
 
@@ -27,12 +31,20 @@ function attack1() {
 	playerPokemon.attack(enemyPokemon, playerPokemon.moves[0]);
 	console.log('attacked with first attack');
 	console.log(enemyPokemon.health);
+	setTimeout(enemyAttack, 1000);
 }
 
 function attack2() {
 	playerPokemon.attack(enemyPokemon, playerPokemon.moves[1]);
 	console.log('attacked with 2nd attack');
 	console.log(enemyPokemon.health);
+	setTimeout(enemyAttack, 1000);
+}
+
+function enemyAttack() {
+	enemyPokemon.attack(playerPokemon, enemyPokemon.moves[0]);
+	console.log('enemy attacked');
+	console.log(playerPokemon.health);
 }
 
 // Set in way where this works for enemy
@@ -40,6 +52,10 @@ function rest() {
 	playerPokemon.incrementHealth(playerPokemon, playerPokemon.moves[1]);
 	console.log('healed');
 	console.log(playerPokemon.health);
+}
+
+function endGame() {
+	console.log('game over');
 }
 
 document.getElementById('attack1').addEventListener('click', attack1);

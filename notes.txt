@@ -15,12 +15,11 @@ Extra Features
 -Sound effects
 -Battle intro sequence
 -Pokemon types
--Complete battle with a trainer (FINAL END GOAL)
 
 
 Today's Goal
 -------------------------------
-Set death function
-Have enemy attack
+	Set death function
+	Have enemy attack
 item function
 print health of pokemon on screen
