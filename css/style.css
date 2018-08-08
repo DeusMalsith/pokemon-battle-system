@@ -19,3 +19,8 @@ body {
 	position: absolute;
 	margin-left: 200px;
 }
+
+#items {
+	position: absolute;
+	margin-left: 300px;
+}

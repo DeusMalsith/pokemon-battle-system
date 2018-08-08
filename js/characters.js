@@ -10,10 +10,6 @@ class Pokemon {
 		this.alive = true;
 	}
 
-	potion() {
-		this.decrementHealth(this.maxhealth * -.3);
-	}
-
 	decrementHealth(damage) {
 		this.health -= damage;
 		if (this.health <= 0) {
@@ -30,9 +26,14 @@ class Pokemon {
 	}
 	attack(target, move) {
 		if (move.target == 'self') {
-			this.decrementHealth(this.maxhealth * move.damage)
+			this.decrementHealth(this.maxhealth * move.damage);
 		} else {
 		target.decrementHealth(move.damage);
+		}
+	}
+	useItem(target, item) {
+		if (item.target == 'self') {
+			this.decrementHealth(this.maxhealth * item.damage);
 		}
 	}
 	// Faint function will pull the next pokemon in the array into the battle
