@@ -1,26 +1,27 @@
 body {
 	background: no-repeat center fixed;
-	background-color: #8bac0f;
 	background-image: url('../assets/img/gb.png');
 
 }
 
 #game-window {
-	position: relative;
-	margin-top: 630px;
-	margin-left: 40%;
+	position: fixed;
+	width: 537px;
+	height: 487px;
+	left: 683px;
+	top: 355px;
 }
 
 #attack1 {
 	position: absolute;
+	left: 50%;
+	top: 50%;
 }
 
 #attack2 {
 	position: absolute;
-	margin-left: 200px;
 }
 
 #items {
 	position: absolute;
-	margin-left: 300px;
 }

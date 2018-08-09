@@ -59,18 +59,18 @@ class Pokemon {
 
 // Make a way for the enemy sprites to be front facing
 pokemon = [];
-pokemon.push(new Pokemon('pikachu', 50, 117, [moves['tackle'], moves['thundershock']], 'pikachu.png', 'pikachuback.png'));
-pokemon.push(new Pokemon('charizard', 50, 163, [moves['fire blast'], moves['mega punch']], 'charizard.png', 'charizardback.png'));
-pokemon.push(new Pokemon('blastoise', 50, 180, [moves['hydro pump'], moves['skull bash']], 'blastoise.png', 'blastoiseback.png'));
-pokemon.push(new Pokemon('kadabra', 50, 128, [moves['psychic'], moves['rest']], 'kadabra.png', 'kadabraback.png'));
-pokemon.push(new Pokemon('venusaur', 50, 171, [moves['solar beam'], moves['body slam']], 'venusaur.png', 'venusaurback.png'));
-pokemon.push(new Pokemon('jolteon', 50, 152, [moves['quick attack'], moves['thunder']], 'jolteon.png', 'jolteonback.png'));
-pokemon.push(new Pokemon('arbok', 50, 133, [moves['acid'], moves['belch']], 'arbok.png', 'arbokback.png'));
-pokemon.push(new Pokemon('scyther', 50, 155, [moves['slash'], moves['hyper beam']], 'scyther.png', 'scytherback.png'));
-pokemon.push(new Pokemon('starmie', 50, 146, [moves['hydro pump'], moves['rest']], 'starmie.png', 'starmieback.png'));
-pokemon.push(new Pokemon('hitmonlee', 50, 138, [moves['hi jump kick'], moves['mega kick']], 'hitmonlee.png', 'hitmonleeback.png'));
-pokemon.push(new Pokemon('haunter', 50, 120, [moves['lick'], moves['psychic']], 'haunter.png', 'haunterback.png'));
-pokemon.push(new Pokemon('machamp', 50, 190, [moves['low sweep'], moves['dynamic punch']], 'machamp.png', 'machampback.png'));
+pokemon.push(new Pokemon('pikachu', 50, 117, [moves['tackle'], moves['thundershock']], '../assets/img/pikachu.png', '../assets/img/pikachuback.png'));
+pokemon.push(new Pokemon('charizard', 50, 163, [moves['fire blast'], moves['mega punch']], '../assets/img/charizard.png', '../assets/img/charizardback.png'));
+pokemon.push(new Pokemon('blastoise', 50, 180, [moves['hydro pump'], moves['skull bash']], '../assets/img/blastoise.png', '../assets/img/blastoiseback.png'));
+pokemon.push(new Pokemon('kadabra', 50, 128, [moves['psychic'], moves['rest']], '../assets/img/kadabra.png', '../assets/img/kadabraback.png'));
+pokemon.push(new Pokemon('venusaur', 50, 171, [moves['solar beam'], moves['body slam']], '../assets/img/venusaur.png', '../assets/img/venusaurback.png'));
+pokemon.push(new Pokemon('jolteon', 50, 152, [moves['quick attack'], moves['thunder']], '../assets/img/jolteon.png', '../assets/img/jolteonback.png'));
+pokemon.push(new Pokemon('arbok', 50, 133, [moves['acid'], moves['belch']], '../assets/img/arbok.png', '../assets/img/arbokback.png'));
+pokemon.push(new Pokemon('scyther', 50, 155, [moves['slash'], moves['hyper beam']], '../assets/img/scyther.png', '../assets/img/scytherback.png'));
+pokemon.push(new Pokemon('starmie', 50, 146, [moves['hydro pump'], moves['rest']], '../assets/img/starmie.png', '../assets/img/starmieback.png'));
+pokemon.push(new Pokemon('hitmonlee', 50, 138, [moves['hi jump kick'], moves['mega kick']], '../assets/img/hitmonlee.png', '../assets/img/hitmonleeback.png'));
+pokemon.push(new Pokemon('haunter', 50, 120, [moves['lick'], moves['psychic']], '../assets/img/haunter.png', '../assets/img/haunterback.png'));
+pokemon.push(new Pokemon('machamp', 50, 190, [moves['low sweep'], moves['dynamic punch']], '../assets/img/machamp.png', '../assets/img/machampback.png'));
 
 
 let playerParty = [];
