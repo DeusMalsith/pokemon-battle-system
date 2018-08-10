@@ -3,6 +3,16 @@
 	src: url(../assets/fonts/pokemon-font.woff2) format('woff2');
 }
 
+button:focus {
+	outline: none;
+}
+
+button:hover::before {
+	position: relative;
+	content: url(../assets/img/pkmncursor.png);
+	left: -68px;
+}
+
 #gameboy {
 	position: absolute;
 	left: 160px;
@@ -14,13 +24,18 @@
 	width: 537px;
 	height: 487px;
 	left: 691px;
-	top: 201px;
+	top: 202px;
+}
+
+#battle {
+	position: absolute;
 }
 
 #pkmn-name {
 	position: absolute;
 	font-family: 'pokemon-font', monospace;
 	font-size: 30px;
+	color: #282d00;
 	background: transparent;
 	border: none !important;
 	left: 25px;
@@ -31,6 +46,7 @@
 	position: absolute;
 	font-family: 'pokemon-font', monospace;
 	font-size: 30px;
+	color: #282d00;
 	background: transparent;
 	border: none !important;
 	left: 261px;
@@ -41,6 +57,7 @@
 	position: absolute;
 	font-family: 'pokemon-font', monospace;
 	font-size: 25px;
+	color: #282d00;
 	background: transparent;
 	border: none !important;
 	left: 130px;
@@ -51,6 +68,7 @@
 	position: absolute;
 	font-family: 'pokemon-font', monospace;
 	font-size: 25px;
+	color: #282d00;
 	background: transparent;
 	border: none !important;
 	left: 398px;
@@ -61,6 +79,7 @@
 	position: absolute;
 	font-family: 'pokemon-font', monospace;
 	font-size: 25px;
+	color: #282d00;
 	background: transparent;
 	border: none !important;
 	left: 295px;
@@ -71,6 +90,7 @@
 	position: absolute;
 	font-family: 'pokemon-font', monospace;
 	font-size: 25px;
+	color: #282d00;
 	background: transparent;
 	border: none !important;
 	left: 403px;
@@ -91,10 +111,6 @@
 	top: 3px;
 }
 
-#battle {
-	position: absolute;
-}
-
 #b1 {
 	position: absolute;
 	/*display: none;*/
@@ -103,16 +119,19 @@
 #b2 {
 	position: absolute;
 	display: none;
+	z-index: 1;
 }
 
 #b3 {
 	position: absolute;
 	display: none;
+	z-index: 1;
 }
 
 #b4 {
 	position: absolute;
 	display: none;
+	z-index: 1;
 }
 
 #attack1 {
@@ -153,7 +172,7 @@
 	position: absolute;
 	left: 270px;
 	top: 432px;
-	width: 110px;
+	width: 131px;
 	height: 28px;
 	background: transparent;
 	border: none !important;
