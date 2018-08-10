@@ -3,14 +3,31 @@
 	src: url(../assets/fonts/pokemon-font.woff2) format('woff2');
 }
 
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+
 button:focus {
 	outline: none;
 }
 
-button:hover::before {
-	position: relative;
+.click:hover::before {
+	position: absolute;
 	content: url(../assets/img/pkmncursor.png);
-	left: -68px;
+	left: -22px;
+	top: 1px;
+}
+
+.hover:hover {
+	cursor: pointer;
 }
 
 #gameboy {
@@ -99,57 +116,24 @@ button:hover::before {
 
 #pkmnback {
 	position: absolute;
-	/*display: hidden;*/
 	left: 16px;
 	top: 152px;
 }
 
 #pkmn {
 	position: absolute;
-	/*display: hidden;*/
+	visibility: visible;
 	left: 355px;
 	top: 3px;
 }
 
 #b1 {
 	position: absolute;
-	/*display: none;*/
 }
 
 #b2 {
 	position: absolute;
-	display: none;
 	z-index: 1;
-}
-
-#b3 {
-	position: absolute;
-	display: none;
-	z-index: 1;
-}
-
-#b4 {
-	position: absolute;
-	display: none;
-	z-index: 1;
-}
-
-#attack1 {
-	position: absolute;
-	left: 200px;
-	top: 358px;
-	width: 300px;
-}
-
-#attack1:hover {
-	cursor: pointer;
-}
-
-#attack2 {
-	position: absolute;
-	left: 200px;
-	top: 388px;
-	width: 300px;
 }
 
 #fight {
@@ -164,21 +148,79 @@ button:hover::before {
     color: rgba(0,0,0,0);
 }
 
-#fight:hover {
-	cursor: pointer;
-}
-
 #items {
 	position: absolute;
 	left: 270px;
 	top: 432px;
-	width: 131px;
+	width: 102px;
 	height: 28px;
 	background: transparent;
 	border: none !important;
 	color: rgba(0,0,0,0);
 }
 
-#items:hover {
-	cursor: pointer;
+#pkmnbtn {
+	position: absolute;
+	left: 430px;
+	top: 378px;
+	width: 50px;
+	height: 28px;
+	background: transparent;
+	border: none !important;
+	color: rgba(0,0,0,0);
+}
+
+#run {
+	position: absolute;
+	left: 430px;
+	top: 432px;
+	width: 77px;
+	height: 28px;
+	background: transparent;
+	border: none !important;
+	color: rgba(0,0,0,0);
+}
+
+#attack1 {
+	position: absolute;
+	font-family: 'pokemon-font';
+	font-size: 25px;
+	left: 158px;
+	top: 342px;
+	width: 350px;
+	height: 28px;
+	background: transparent;
+	border: none !important;
+	color: #282d00;
+	z-index: -1;
+	text-align: left;
+}
+
+#attack2 {
+	position: absolute;
+	font-family: 'pokemon-font';
+	font-size: 25px;
+	left: 158px;
+	top: 372px;
+	width: 350px;
+	height: 28px;
+	background: transparent;
+	border: none !important;
+	color: #282d00;
+	z-index: -1;
+	text-align: left;
+}
+
+#attackcancel {
+	position: absolute;
+	font-family: 'pokemon-font';
+	font-size: 25px;
+	left: 158px;
+	top: 427px;
+	width: 77px;
+	height: 28px;
+	background: transparent;
+	border: none !important;
+	color: #282d00;
+	z-index: -1;
 }
