@@ -14,11 +14,21 @@ function initGame() {
 		tempPokemon.owner = 'enemy';
 		enemyParty.push(tempPokemon);
 	}
-
 	playerPokemon = playerParty[0];
 	console.log(playerPokemon);
 	enemyPokemon = enemyParty[0];
+
+	showPokemon();
+}
+
+function showPokemon(){
 	console.log(enemyPokemon);
+	document.getElementById('pkmnback').src = playerPokemon.imgback;
+	document.getElementById('pkmn').src = enemyPokemon.imgfront;
+	document.getElementById('pkmnback-name').textContent = playerPokemon.pokename;
+	document.getElementById('pkmn-name').textContent = enemyPokemon.pokename;
+	document.getElementById('pkmnback-maxhp').textContent = playerPokemon.maxhealth
+	document.getElementById('pkmnback-hp').textContent = playerPokemon.health
 }
 
 initGame();
@@ -27,29 +37,35 @@ function switchPokemon() {
 	console.log('switched pokemon');
 }
 
-function itemMenu() {
+function itemButton() {
 
 }
 
 function attack1() {
 	playerPokemon.attack(enemyPokemon, playerPokemon.moves[0]);
-	console.log('attacked with first attack');
-	console.log(enemyPokemon.health);
+	//console.log('attacked with first attack');
+	//console.log(enemyPokemon.health);
+	enemyPokemon.faint(enemyPokemon, enemyParty);
 	setTimeout(enemyAttack, 1000);
+	showPokemon();
 }
 
 function attack2() {
 	playerPokemon.attack(enemyPokemon, playerPokemon.moves[1]);
-	console.log('attacked with 2nd attack');
+	//console.log('attacked with 2nd attack');
 	console.log(enemyPokemon.health);
+	enemyPokemon.faint(enemyPokemon, enemyParty);
 	setTimeout(enemyAttack, 1000);
+	showPokemon();
 }
 
 function enemyAttack() {
 	var attackMove = Math.floor(Math.random() * enemyPokemon.moves.length);
-	console.log('attacked with',enemyPokemon.moves[attackMove].name);
+	//console.log('attacked with',enemyPokemon.moves[attackMove].name);
 	enemyPokemon.attack(playerPokemon,enemyPokemon.moves[attackMove]);
-	console.log(playerPokemon.health);
+	//console.log(playerPokemon.health);
+	showPokemon();
+	playerPokemon.faint(playerPokemon, playerParty);
 }
 
 // // Set in way where this works for enemy

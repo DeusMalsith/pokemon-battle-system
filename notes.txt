@@ -23,3 +23,5 @@ Today's Goal
 	Have enemy attack
 item function
 print health of pokemon on screen
+
+Split the gameboy in pieces
