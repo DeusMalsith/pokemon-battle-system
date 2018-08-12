@@ -55,6 +55,20 @@ function pkmnButton() {
 
 }
 
+function enemyHPScale() {
+	var elem = document.getElementById("enemy-hp-bar"); 
+    var width = 161;
+    var id = setInterval(frame, 100);
+    function frame() {
+        if (width <= 0) {
+            clearInterval(id);
+        } else {
+            width--; 
+            elem.style.width = width - '%'; 
+        }
+    }
+}
+
 function cancelButton() {
 	document.getElementById('attackcancel').style.zIndex = '-1';
 	document.getElementById('attack1').style.zIndex = '-1';
@@ -69,10 +83,13 @@ function attack1() {
 	document.getElementById('attack1').style.zIndex = '-1';
 	document.getElementById('attack2').style.zIndex = '-1';
 	document.getElementById('b2').src = "";
-	document.getElementById('pkmn').style.animation = 'blink 0.15s 5';
-	setTimeout(function() {
-		document.getElementById('pkmn').style.animation = '';
-	}, 1000);
+	if (playerPokemon.moves[0].target != 'self') {
+		document.getElementById('pkmn').style.animation = 'blink 0.15s 5';
+		setTimeout(function() {
+			document.getElementById('pkmn').style.animation = '';
+		}, 1000);
+	}
+	enemyHPScale();
 	//console.log('attacked with first attack');
 	//console.log(enemyPokemon.health);
 	enemyPokemon.faint(enemyPokemon, enemyParty);
@@ -91,10 +108,12 @@ function attack2() {
 	document.getElementById('attack1').style.zIndex = '-1';
 	document.getElementById('attack2').style.zIndex = '-1';
 	document.getElementById('b2').src = "";
-	document.getElementById('pkmn').style.animation = 'blink 0.15s 5';
-	setTimeout(function() {
-		document.getElementById('pkmn').style.animation = '';
-	}, 1000);
+	if (playerPokemon.moves[1].target != 'self') {
+		document.getElementById('pkmn').style.animation = 'blink 0.15s 5';
+		setTimeout(function() {
+			document.getElementById('pkmn').style.animation = '';
+		}, 1000);
+	}
 	//console.log('attacked with 2nd attack');
 	console.log(enemyPokemon.health);
 	enemyPokemon.faint(enemyPokemon, enemyParty);
@@ -110,10 +129,12 @@ function enemyAttack() {
 	var attackMove = Math.floor(Math.random() * enemyPokemon.moves.length);
 	console.log('attacked with',enemyPokemon.moves[attackMove].name);
 	enemyPokemon.attack(playerPokemon,enemyPokemon.moves[attackMove]);
-	document.getElementById('pkmnback').style.animation = 'blink 0.15s 5';
-	setTimeout(function() {
-		document.getElementById('pkmnback').style.animation = '';
-	}, 1000)
+	if (enemyPokemon.moves[attackMove] != 'self') {
+		document.getElementById('pkmnback').style.animation = 'blink 0.15s 5';
+		setTimeout(function() {
+			document.getElementById('pkmnback').style.animation = '';
+		}, 1000);
+	}
 	//console.log(playerPokemon.health);
 	showPokemon();
 	playerPokemon.faint(playerPokemon, playerParty);
@@ -136,7 +157,7 @@ function removeListeners() {
 }
 
 function endGame() {
-	console.log('game over');
+	document.getElementById('battle').style.zIndex = '-1';
 }
 
 

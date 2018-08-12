@@ -114,6 +114,50 @@ button:focus {
 	top: 263px;
 }
 
+#enemy-hp {
+	position: absolute;
+	padding-top: 7px;
+	top: 67px;
+	left: 107px;
+	border-radius: 1px;
+	width: 161px;
+	line-height: 7px;
+}
+
+#enemy-hp-bar {
+	position: absolute;
+	padding-top: 7px;
+	top: 0px;
+	border-radius: 1px;
+	width: 100%;
+	line-height: 7px;
+	background-color: #383e00;
+	transform-origin: left;
+	transform: scaleX(1);
+}
+
+#player-hp {
+	position: absolute;
+	padding-top: 7px;
+	top: 255px;
+	left: 322px;
+	border-radius: 1px;
+	width: 161px;
+	line-height: 7px;	
+}
+
+#player-hp-bar {
+	position: absolute;
+	padding-top: 7px;
+	top: 0px;
+	border-radius: 1px;
+	width: 100%;
+	line-height: 7px;
+	background-color: #383e00;
+	transform-origin: left;
+	transform: scaleX(1);
+}
+
 #pkmnback {
 	position: absolute;
 	left: 16px;
