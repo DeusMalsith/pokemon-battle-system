@@ -134,6 +134,7 @@ button:focus {
 	background-color: #383e00;
 	transform-origin: left;
 	transform: scaleX(1);
+	transition: width 1s;
 }
 
 #player-hp {
@@ -156,6 +157,7 @@ button:focus {
 	background-color: #383e00;
 	transform-origin: left;
 	transform: scaleX(1);
+	transition: width 1s;
 }
 
 #pkmnback {

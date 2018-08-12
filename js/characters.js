@@ -26,7 +26,7 @@ class Pokemon {
 	}
 	attack(target, move) {
 		if (move.target == 'self') {
-			this.decrementHealth(this.maxhealth * move.damage);
+			this.decrementHealth(Math.round(this.maxhealth * move.damage));
 		} else {
 		target.decrementHealth(move.damage);
 		}

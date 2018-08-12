@@ -28,10 +28,16 @@ function showPokemon(){
 	document.getElementById('pkmn').src = enemyPokemon.imgfront;
 	document.getElementById('pkmnback-name').textContent = playerPokemon.pokename;
 	document.getElementById('pkmn-name').textContent = enemyPokemon.pokename;
-	document.getElementById('pkmnback-maxhp').textContent = playerPokemon.maxhealth
-	document.getElementById('pkmnback-hp').textContent = playerPokemon.health
+	document.getElementById('pkmnback-maxhp').textContent = playerPokemon.maxhealth;
+	document.getElementById('pkmnback-hp').textContent = playerPokemon.health;
 	document.getElementById('attack1').textContent = playerPokemon.moves[0].name;
 	document.getElementById('attack2').textContent = playerPokemon.moves[1].name;
+
+	// This animates the health bar when attacked
+	var percentage = playerPokemon.health / playerPokemon.maxhealth;
+	document.getElementById('player-hp-bar').style.width = ((161 * percentage) + "px");
+	percentage = enemyPokemon.health / enemyPokemon.maxhealth;
+	document.getElementById('enemy-hp-bar').style.width = ((161 * percentage) + "px");
 }
 
 initGame();
@@ -129,7 +135,7 @@ function enemyAttack() {
 	var attackMove = Math.floor(Math.random() * enemyPokemon.moves.length);
 	console.log('attacked with',enemyPokemon.moves[attackMove].name);
 	enemyPokemon.attack(playerPokemon,enemyPokemon.moves[attackMove]);
-	if (enemyPokemon.moves[attackMove] != 'self') {
+	if (enemyPokemon.moves[attackMove].target != 'self') {
 		document.getElementById('pkmnback').style.animation = 'blink 0.15s 5';
 		setTimeout(function() {
 			document.getElementById('pkmnback').style.animation = '';
@@ -159,5 +165,3 @@ function removeListeners() {
 function endGame() {
 	document.getElementById('battle').style.zIndex = '-1';
 }
-
-

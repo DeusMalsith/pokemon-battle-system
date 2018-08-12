@@ -4,7 +4,7 @@ let items = {
 	'potion': {
 		name: 'POTION',
 		damage: -.3,
-		target: 'self'
+		target: 'self',
 		amount: 3
 	}
 };
