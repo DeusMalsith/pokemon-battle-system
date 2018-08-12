@@ -1,7 +1,36 @@
-console.log('working');
+let titlesfx = new Audio('./assets/sfx/pokemonopening.mp3');
+let battlesfx = new Audio('./assets/sfx/pokemonbattle.mp3');
+let victorysfx = new Audio('./assets/sfx/pokemonvictory.mp3');
 
 let playerPokemon;
 let enemyPokemon;
+
+addListeners();
+
+function startButton() {
+	document.getElementById('startbutton').style.zIndex = '-1';
+	document.getElementById('battle').style.visibility = 'visible';
+	document.getElementById('opening').style.zIndex = '1';
+	titlesfx.play();
+	setTimeout(function() {
+		titlesfx.pause();
+		transition();
+	}, 9000);
+}
+
+function transition() {
+	document.getElementById('black').src = './assets/img/black.png';
+	document.getElementById('black').style.zIndex = '1';
+	document.getElementById('opening').style.zIndex = '-1';
+	setTimeout(function() {
+	battlesfx.play();
+	}, 1000);
+
+	setTimeout(function() {
+	document.getElementById('black').style.zIndex = '-1';
+	initGame();
+	}, 3800)
+}
 
 //Starts the game and sets the beginning pokemon at random
 //Pokemon max of six for enemy and player
@@ -19,7 +48,6 @@ function initGame() {
 	enemyPokemon = enemyParty[0];
 
 	showPokemon();
-	addListeners();
 }
 
 function showPokemon(){
@@ -40,7 +68,7 @@ function showPokemon(){
 	document.getElementById('enemy-hp-bar').style.width = ((161 * percentage) + "px");
 }
 
-initGame();
+// initGame();
 
 function switchPokemon() {
 	console.log('switched pokemon');
@@ -147,6 +175,7 @@ function enemyAttack() {
 }
 
 function addListeners() {
+	document.getElementById('startbutton').addEventListener('click', startButton);
 	document.getElementById('fight').addEventListener('click', fightButton);
 	document.getElementById('attackcancel').addEventListener('click', cancelButton);
 	document.getElementById('attack1').addEventListener('click', attack1);
@@ -163,5 +192,7 @@ function removeListeners() {
 }
 
 function endGame() {
-	document.getElementById('battle').style.zIndex = '-1';
+	document.getElementById('battle').style.visibility = 'hidden';
+	battlesfx.pause();
+	victorysfx.play();
 }

@@ -46,6 +46,7 @@ button:focus {
 
 #battle {
 	position: absolute;
+	visibility: hidden;
 }
 
 #pkmn-name {
@@ -168,9 +169,37 @@ button:focus {
 
 #pkmn {
 	position: absolute;
-	visibility: visible;
 	left: 355px;
 	top: 3px;
+}
+
+#opening {
+	position: absolute;
+	top: 2px;
+}
+
+#startbutton {
+	position: absolute;
+	font-family: 'pokemon-font';
+	font-size: 20px;
+    width: 215px;
+    top: 200px;
+    left: 160px;
+	background: transparent;
+    border: none !important;
+	z-index: 1;
+	visibility: visible;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+}
+
+#black {
+	position: absolute;
+}
+
+#ending {
+	position: absolute;
 }
 
 #b1 {
@@ -184,7 +213,6 @@ button:focus {
 
 #fight {
 	position: absolute;
-	display: hidden;
 	left: 268px;
 	top: 378px;
 	width: 131px;
