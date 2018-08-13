@@ -5,9 +5,13 @@ How to play
 -------------------
 
 Click the start button to begin the game.
+
 The player and enemy start the battle with a random assortment of six Pokemon.
+
 Once the battle starts the only functional button at this time is FIGHT.
+
 Each Pokemon has two attacks to use.
+
 TIP: The only way to heal is by using REST. The only Pokemon with that ability is Starmie and Kadabra.
 
 Goal of the game
