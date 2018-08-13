@@ -214,6 +214,7 @@ button:focus {
 	left: 25px;
 	text-align: left;
 	line-height: 50px;
+	z-index: -1;
 }
 
 #b1 {
