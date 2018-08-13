@@ -58,7 +58,6 @@ class Pokemon {
 	}
 };
 
-// Make a way for the enemy sprites to be front facing
 pokemon = [];
 pokemon.push(new Pokemon('PIKACHU', 50, 117, [moves['tackle'], moves['thundershock']], './assets/img/pikachu.png', './assets/img/pikachuback.png'));
 pokemon.push(new Pokemon('CHARIZARD', 50, 163, [moves['fire blast'], moves['mega punch']], './assets/img/charizard.png', './assets/img/charizardback.png'));

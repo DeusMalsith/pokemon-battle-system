@@ -68,8 +68,6 @@ function showPokemon(){
 	document.getElementById('enemy-hp-bar').style.width = ((161 * percentage) + "px");
 }
 
-// initGame();
-
 function switchPokemon() {
 	console.log('switched pokemon');
 }
@@ -87,20 +85,6 @@ function fightButton() {
 
 function pkmnButton() {
 
-}
-
-function enemyHPScale() {
-	var elem = document.getElementById("enemy-hp-bar"); 
-    var width = 161;
-    var id = setInterval(frame, 100);
-    function frame() {
-        if (width <= 0) {
-            clearInterval(id);
-        } else {
-            width--; 
-            elem.style.width = width - '%'; 
-        }
-    }
 }
 
 function cancelButton() {
@@ -123,9 +107,6 @@ function attack1() {
 			document.getElementById('pkmn').style.animation = '';
 		}, 1000);
 	}
-	enemyHPScale();
-	//console.log('attacked with first attack');
-	//console.log(enemyPokemon.health);
 	enemyPokemon.faint(enemyPokemon, enemyParty);
 	removeListeners();
 	setTimeout(function() {
@@ -148,7 +129,6 @@ function attack2() {
 			document.getElementById('pkmn').style.animation = '';
 		}, 1000);
 	}
-	//console.log('attacked with 2nd attack');
 	console.log(enemyPokemon.health);
 	enemyPokemon.faint(enemyPokemon, enemyParty);
 	removeListeners();
@@ -169,7 +149,6 @@ function enemyAttack() {
 			document.getElementById('pkmnback').style.animation = '';
 		}, 1000);
 	}
-	//console.log(playerPokemon.health);
 	showPokemon();
 	playerPokemon.faint(playerPokemon, playerParty);
 }
