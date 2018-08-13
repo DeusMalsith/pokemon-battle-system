@@ -192,7 +192,9 @@ function removeListeners() {
 }
 
 function endGame() {
-	document.getElementById('battle').style.visibility = 'hidden';
+	document.getElementById('ending').src = './assets/img/pkmnvictory.png';
+	document.getElementById('ending').style.zIndex = '1';
+	document.getElementById('endingtext').style.zIndex = '1';
 	battlesfx.pause();
 	victorysfx.play();
 }

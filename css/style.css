@@ -180,7 +180,7 @@ button:focus {
 
 #startbutton {
 	position: absolute;
-	font-family: 'pokemon-font';
+	font-family: 'pokemon-font', monospace;
 	font-size: 20px;
     width: 215px;
     top: 200px;
@@ -200,6 +200,20 @@ button:focus {
 
 #ending {
 	position: absolute;
+}
+
+#endingtext {
+	position: absolute;
+	font-family: 'pokemon-font', monospace;
+	font-size: 25px;
+	color: #282d00;
+	background: transparent;
+	border: none !important;
+	width: 500px;
+	top: 352px;
+	left: 25px;
+	text-align: left;
+	line-height: 50px;
 }
 
 #b1 {
@@ -257,7 +271,7 @@ button:focus {
 
 #attack1 {
 	position: absolute;
-	font-family: 'pokemon-font';
+	font-family: 'pokemon-font', monospace;
 	font-size: 25px;
 	left: 158px;
 	top: 342px;
@@ -272,7 +286,7 @@ button:focus {
 
 #attack2 {
 	position: absolute;
-	font-family: 'pokemon-font';
+	font-family: 'pokemon-font', monospace;
 	font-size: 25px;
 	left: 158px;
 	top: 372px;
@@ -287,7 +301,7 @@ button:focus {
 
 #attackcancel {
 	position: absolute;
-	font-family: 'pokemon-font';
+	font-family: 'pokemon-font', monospace;
 	font-size: 25px;
 	left: 158px;
 	top: 427px;
