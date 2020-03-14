@@ -12,7 +12,7 @@ Once the battle starts the only functional button at this time is FIGHT.
 
 Each Pokemon has two attacks to use.
 
-TIP: The only way to heal is by using REST. The only Pokemon with that ability is Starmie and Kadabra.
+TIP: The only way to heal is by using REST. The only Pokemon with that ability are Starmie and Kadabra.
 
 Goal of the game
 -------------------
