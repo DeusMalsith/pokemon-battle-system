@@ -17,3 +17,5 @@ TIP: The only way to heal is by using REST. The only Pokemon with that ability a
 Goal of the game
 -------------------
 The goal of the game is to defeat the opposite trainer. In order to win you must defeat all six of the opposite trainer's Pokemon.
+
+Live site: https://deusmalsith.github.io/pokemon-battle-system/ (View on a Desktop)
